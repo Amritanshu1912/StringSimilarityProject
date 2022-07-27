@@ -1,6 +1,6 @@
 #ifndef SIMILARITYPROJECT_H
 #define SIMILARITYPROJECT_H
-  
+
 #include <bits/stdc++.h>
 using namespace std;
 
@@ -44,7 +44,7 @@ double levenschtein_distance_algorithm(const pair<string, string> my_string_pair
     int greater_length = string1.length() > string2.length() ? string1.length() : string2.length();
     double levenshtein_ratio = (double)(greater_length - distance) / (double)(greater_length);
 
-    levenshtein_ratio = std::round(levenshtein_ratio * 100.0) / 100.0;
+    levenshtein_ratio = std::round(levenshtein_ratio * 100.0) / 100.0; // to ensure that the ratio is rounded upto two decimal places
     return levenshtein_ratio;
 }
 
@@ -144,7 +144,7 @@ double dice_coefficient_algorithm(const pair<string, string> my_string_pair)
     int total = string1.length() - 1 + string2.length() - 1;
     double dice_coefficient = (double)(intersection * 2) / (double)total;
 
-    dice_coefficient = std::round(dice_coefficient * 100.0) / 100.0;
+    dice_coefficient = std::round(dice_coefficient * 100.0) / 100.0; // to ensure that the ratio is rounded upto two decimal places
 
     return dice_coefficient;
 }
