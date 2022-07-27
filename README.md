@@ -51,7 +51,7 @@ cmake .. -DBUILD_GMOCK=OFF # we do not need GMOCK for this project
 ```
 - You should see a folder named googletest in you cwd. Cmake would ask to choose a compiler kit to build and configure cmake files. I used gcc because it was the only active kit I had installed.
 
-come to root directory and open terminal and type
+- Come to root directory, open terminal and type
 ```
 mkdir build
 ```
