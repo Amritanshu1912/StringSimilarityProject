@@ -10,7 +10,7 @@ I have added test cases using GoogleTest framework using CMAKE.
 2. similarityProject.h is header file containing all the function implemented to calculate the similarity ratios using two algorithms.
 3. similarityProjectTest.cpp is our test file that contains testcases. 
 
-The 'Original StringSimilarity template' folder contains 'OGstringSimilarityTemplate.cpp' which is a C++ program which asks the user to enter two strings and produces a pair of two decimal values. The first decimal value of the pair is calculated using Levenshtein Distance Algorithm and the second decimaml value is calculated using Dice coefficient Algorithm.
+The 'Original StringSimilarity template' folder contains 'OGstringSimilarityTemplate.cpp' which is a C++ program which asks the user to enter two strings and outputs a pair of two decimal values. The first decimal value of the pair is calculated using Levenshtein Distance Algorithm and the second decimaml value is calculated using Dice coefficient Algorithm.
 
 ## A brief description of functions used in the header file 
 
