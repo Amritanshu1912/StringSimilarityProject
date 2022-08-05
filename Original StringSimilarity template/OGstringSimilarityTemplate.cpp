@@ -91,9 +91,16 @@ int similarity::find_levenschtein_distance()
 {
     string string1 = get_string_pair().first;
     string string2 = get_string_pair().second;
+
     // Declaring a 2D array on the heap dynamically:
     int length_1 = string1.length();
     int length_2 = string2.length();
+
+    if (length_1 == 0 || length_2 == 0)
+    {
+        return length_1 == 0 ? length_2 : length_1;
+    }
+
     int **d = new int *[length_1 + 1];
     for (int i = 0; i < length_1 + 1; i++)
         d[i] = new int[length_2 + 1];
@@ -157,7 +164,7 @@ double similarity::dice_coefficient_algorithm()
     string string1 = get_string_pair().first;
     string string2 = get_string_pair().second;
 
-    // base case
+    // base cases
     if (string1.length() == 0 || string2.length() == 0) // if any string is empty, it means zero common bigrams,
         return 0;                                       // therefore dice coeff becomes zero
 
@@ -170,6 +177,7 @@ double similarity::dice_coefficient_algorithm()
     map<string, int> string1_bigrams, string2_bigrams;
 
     fill_map(string1_bigrams, string1);
+
     fill_map(string2_bigrams, string2);
 
     int intersection = find_intersections(string1_bigrams, string2_bigrams);
@@ -199,6 +207,7 @@ void fill_map(map<string, int> &string_bigrams, string &str)
 
 int find_intersections(map<string, int> &string1_bigrams, map<string, int> &string2_bigrams)
 {
+    // gg3  gg6
     int intersection = 0;
     std::map<string, int>::iterator itr = string2_bigrams.begin();
     while (itr != string2_bigrams.end())
