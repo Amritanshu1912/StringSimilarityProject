@@ -1,0 +1,3 @@
+"C:\Program Files\CMake\bin\cmake.exe" -E rm -f CMakeFiles\similarityProjecttest.dir/objects.a
+C:\PROGRA~2\mingw64\bin\ar.exe qc CMakeFiles\similarityProjecttest.dir/objects.a @CMakeFiles\similarityProjecttest.dir\objects1.rsp
+C:\PROGRA~2\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\similarityProjecttest.dir/objects.a -Wl,--no-whole-archive -o similarityProjecttest.exe -Wl,--out-implib,libsimilarityProjecttest.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\similarityProjecttest.dir\linklibs.rsp
